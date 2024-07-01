@@ -1,0 +1,6 @@
+@thekumral.Api_HostAddress = http://localhost:5082
+
+GET {{thekumral.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
