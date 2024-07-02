@@ -10,7 +10,7 @@ namespace thekumral.Core.Services
 {
     public interface IAuthService
     {
-        Task<IdentityResult> RegisterUser(RegisterDto regiterDto);
+        Task<IdentityResult> RegisterUser(RegisterDto registerDto);
 
         Task<LoginResponseDto> Login(LoginDto loginDto);
     }
