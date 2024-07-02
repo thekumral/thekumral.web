@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace thekumral.Core.Entities.BaseEntities
+namespace thekumral.Core.UnitOfWork
 {
-    public class NoContentDto
+    public interface IUnitOfWork
     {
+        Task CommitAsync();
+        void Commit();
+
     }
 }

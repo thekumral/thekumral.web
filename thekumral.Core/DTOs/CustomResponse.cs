@@ -5,8 +5,12 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace thekumral.Core.Entities.BaseEntities
+namespace thekumral.Core.DTOs
 {
+    /// <summary>
+    /// İsteklerin özel yanıtlarını temsil eden genel amaçlı veri transfer nesnesi.
+    /// </summary>
+    /// <typeparam name="T">Veri türü</typeparam>
     public class CustomResponseDto<T>
     {
         /// <summary>

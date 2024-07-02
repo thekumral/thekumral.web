@@ -5,15 +5,15 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.web", "thekumral.web\thekumral.web.csproj", "{4D550D71-B2CF-4841-8315-87D36A69C91A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thekumral.Api", "thekumral.Api\thekumral.Api.csproj", "{AE4F3D5E-31E6-4AF6-9039-34DB4C2BAA1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Api", "thekumral.Api\thekumral.Api.csproj", "{AE4F3D5E-31E6-4AF6-9039-34DB4C2BAA1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thekumral.Core", "thekumral.Core\thekumral.Core.csproj", "{7B2070E2-EE91-4827-8F4B-8C55347F1841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Core", "thekumral.Core\thekumral.Core.csproj", "{7B2070E2-EE91-4827-8F4B-8C55347F1841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thekumral.Services", "thekumral.Services\thekumral.Services.csproj", "{57FD57EA-4C2F-497A-B29F-6DBB674BF861}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Service", "thekumral.Services\thekumral.Service.csproj", "{57FD57EA-4C2F-497A-B29F-6DBB674BF861}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thekumral.Repository", "thekumral.Repository\thekumral.Repository.csproj", "{94E31B70-F174-42B3-B3A1-B310A39D29BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Repository", "thekumral.Repository\thekumral.Repository.csproj", "{94E31B70-F174-42B3-B3A1-B310A39D29BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thekumral.Caching", "thekumral.cache\thekumral.Caching.csproj", "{98AD01D4-DEE0-4497-83A6-2F7A3C7291D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Caching", "thekumral.cache\thekumral.Caching.csproj", "{98AD01D4-DEE0-4497-83A6-2F7A3C7291D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
