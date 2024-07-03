@@ -16,7 +16,7 @@ namespace thekumral.Repository.Repositories
         {
         }
 
-        public async Task<List<Company>> GetPostWithUsersCompany()
+        public async Task<List<Company>> GetPostCompanyWithUsers()
         {
             var Company = _context.Companies.Include(x => x.Users).ToListAsync();
             return await Company;
@@ -31,8 +31,6 @@ namespace thekumral.Repository.Repositories
 
             return postsWithCompany;
         }
-
-
 
     }
 }

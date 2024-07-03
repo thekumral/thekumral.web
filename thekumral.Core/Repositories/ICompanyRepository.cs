@@ -9,7 +9,7 @@ namespace thekumral.Core.Repositories
 {
     public interface ICompanyRepository : IGenericRepository<Company>
     {
-        Task<List<Company>> GetPostWithUsersCompany();
+        Task<List<Company>> GetPostCompanyWithUsers();
         Task<List<Post>> GetPostsByCompanyIdAsync(Guid companyId);
 
     }

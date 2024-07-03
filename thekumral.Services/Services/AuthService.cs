@@ -69,7 +69,7 @@ namespace thekumral.Service.Services
             };
         }
 
-        public async Task<IdentityResult> RegisterUser(RegisterDto registerDto) 
+        public async Task<IdentityResult> RegisterUser(RegisterDto registerDto)
         {
             User user = mapper.Map<User>(registerDto);
             user.UserName = registerDto.Email;
@@ -83,8 +83,6 @@ namespace thekumral.Service.Services
             }
 
             return result;
-
-
         }
     }
 }

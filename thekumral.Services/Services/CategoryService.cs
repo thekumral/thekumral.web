@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -8,65 +9,36 @@ using thekumral.Core.DTOs;
 using thekumral.Core.DTOs.Categories;
 using thekumral.Core.DTOs.Posts;
 using thekumral.Core.Entities;
+using thekumral.Core.Repositories;
 using thekumral.Core.Services;
+using thekumral.Core.UnitOfWork;
 
 namespace thekumral.Service.Services
 {
     public class CategoryService : Service<Category>, ICategoryService
     {
-        public Task<Category> AddAsync(Category entity)
+        private readonly ICategoryService _categoryService;
+        private readonly IMapper _mapper;
+
+        public CategoryService(ICategoryService categoryService, IMapper mapper,IGenericRepository<Category> repository,IUnitOfWork unitOfWork) : base(repository,unitOfWork)
         {
-            throw new NotImplementedException();
+            _categoryService = categoryService;
+            _mapper = mapper;
         }
 
-        public Task<IEnumerable<Category>> AddRangeAsync(IEnumerable<Category> entities)
+        public async Task<List<PostDto>> GetPostsByCategoryIdAsync(Guid categoryId)
         {
-            throw new NotImplementedException();
+            var posts = await _categoryService.GetPostsByCategoryIdAsync(categoryId);
+            var postDto = _mapper.Map<List<PostDto>>(posts);
+            return postDto;
+        }
+        
+        public async Task<CustomResponseDto<PostDto>> SingleCategoryPostsByCategoryId(Guid categoryId)
+        {
+            var category = await _categoryService.SingleCategoryPostsByCategoryId(categoryId);
+            var postDto = _mapper.Map<PostDto>(category);
+            return CustomResponseDto<PostDto>.Success(200,postDto);
         }
 
-        public Task<bool> AnyAsync(Expression<Func<Category, bool>> expression)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Category>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Category> GetByIdAsync(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<PostDto>> GetPostsByCategoryIdAsync(Guid categoryId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<CustomResponseDto<CategoryWithPostDto>> GetSingleCategoryByIdWithPostAsync(Guid categoryId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task RemoveAsync(Category entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task RemoveRangeAsync(IEnumerable<Category> entities)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(Category entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<Category> Where(Expression<Func<Category, bool>> expression)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

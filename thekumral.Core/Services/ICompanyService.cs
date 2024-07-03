@@ -11,7 +11,7 @@ namespace thekumral.Core.Services
 {
     public interface ICompanyService : IService<Company>
     {
-        Task<CustomResponseDto<List<CompanyWithUserDto>>> GetPostCompanyWithUsers();
+        Task<CustomResponseDto<List<CompanyDto>>> GetPostCompanyWithUsers();
         Task<CustomResponseDto<List<PostDtoForCompany>>> GetPostsByCompanyIdAsync(Guid companyId);
 
     }

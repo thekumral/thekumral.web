@@ -17,7 +17,7 @@ namespace thekumral.Core.Services
         /// </summary>
         /// <param name="categoryId"></param>
         /// <returns type=>Makalelerin kategori bilgisi ile gelen özel yanıt <see cref="CategoryWithPostDto"/></returns>
-        public Task<CustomResponseDto<CategoryWithPostDto>> GetSingleCategoryByIdWithPostAsync(Guid categoryId);
+        public Task<CustomResponseDto<PostDto>> SingleCategoryPostsByCategoryId(Guid categoryId);
 
 
         /// <summary>
