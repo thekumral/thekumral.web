@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Authentication;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
+using thekumral.Core.DTOs;
 using thekumral.Core.DTOs.Users;
 using thekumral.Core.Entities;
 using thekumral.Core.Services;
 using thekumral.Core.Services.Tokens;
+using thekumral.Service.Exceptions;
 
 namespace thekumral.Service.Services
 {
@@ -37,13 +40,13 @@ namespace thekumral.Service.Services
             this.configuration = configuration;
         }
 
-        public async Task<LoginResponseDto> Login(LoginDto loginDto)
+        public async Task<CustomResponseDto<LoginResponseDto>> Login(LoginDto loginDto)
         {
             var user = await userManager.FindByEmailAsync(loginDto.Email);
             var result = await userManager.CheckPasswordAsync(user, loginDto.Password);
             if (user == null || !result)
             {
-                return new LoginResponseDto();
+                return CustomResponseDto<LoginResponseDto>.Fail(400, "Kullanıcı Adı veya Şifre Yanlış");
             }
             IList<string> roles = await userManager.GetRolesAsync(user);
 
@@ -61,12 +64,13 @@ namespace thekumral.Service.Services
 
             await userManager.SetAuthenticationTokenAsync(user, "Default", "AccessToken", _token);
 
-            return new()
+            var loginresponse = new LoginResponseDto()
             {
                 Token = _token,
                 RefreshToken = refreshToken,
                 Expiration = token.ValidTo
             };
+            return CustomResponseDto<LoginResponseDto>.Success(200,loginresponse);
         }
 
         public async Task<IdentityResult> RegisterUser(RegisterDto registerDto)

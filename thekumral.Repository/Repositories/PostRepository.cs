@@ -27,7 +27,7 @@ namespace thekumral.Repository.Repositories
         /// Kategori bilgisiyle birlikte tüm makaleleri getirir.
         /// </summary>
         /// <returns>Makalelerin kategori bilgisi ile liste halinde dönüşü <see cref="List{Post}"/></returns>
-        public async Task<List<Post>> GetPostsWithCategory(Guid CompanyId)
+        public async Task<List<Post>> GetPostsByCompanyId(Guid CompanyId)
         {
             return await _context.Posts.Include(x => x.Category).Where(gp => gp.CompanyId ==CompanyId).ToListAsync();
         }
@@ -45,20 +45,25 @@ namespace thekumral.Repository.Repositories
 
             return posts;
         }
+        public async Task<List<Post>> GetPostsByCategory()
+        {
+            var posts = _context.Posts.Include(x=>x.Category).ToListAsync();
+            return await posts;
+        }
 
         /// <summary>
         /// Belirli bir şirket kimliğine sahip makaleleri getirir.
         /// </summary>
         /// <param name="companyId">Şirket kimliği</param>
         /// <returns>Belirtilen şirkete ait makalelerin listesi <see cref="List{Post}"/></returns>
-        async Task<List<Post>> IPostRepository.GetPostsByCompanyId(Guid companyId)
-        {
-            var userPosts = await _context.Users
-            .Where(u => u.CompanyId == companyId)
-            .SelectMany(u => u.Posts)
-            .ToListAsync();
+        //async Task<List<Post>> IPostRepository.GetPostsByCompanyId(Guid companyId)
+        //{
+        //    var userPosts = await _context.Users
+        //    .Where(u => u.CompanyId == companyId)
+        //    .SelectMany(u => u.Posts)
+        //    .ToListAsync();
 
-            return userPosts;
-        }
+        //    return userPosts;
+        //}
     }
 }

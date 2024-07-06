@@ -74,7 +74,16 @@ namespace thekumral.Repository.Repositories
         /// </summary>
         public void Remove(T entity)
         {
-            _dbSet.Remove(entity);
+            var propertyInfo = typeof(T).GetProperty("IsDeleted");
+            if (propertyInfo != null && propertyInfo.PropertyType == typeof(bool))
+            {
+                propertyInfo.SetValue(entity, true);
+                _dbSet.Update(entity);
+            }
+            else
+            {
+                _dbSet.Remove(entity);
+            }
         }
 
         /// <summary>

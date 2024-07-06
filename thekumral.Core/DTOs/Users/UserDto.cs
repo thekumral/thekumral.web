@@ -13,14 +13,8 @@ namespace thekumral.Core.DTOs.Users
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Guid? CompanyId { get; set; }
-        public string CompanyName { get; set; }
-        public string RefreshToken { get; set; }
         public DateTimeOffset? RefreshTokenExpiryTime { get; set; }
-        public List<PostDto> Posts { get; set; }
 
-        public UserDto()
-        {
-            Posts = new List<PostDto>();
-        }
+        
     }
 }

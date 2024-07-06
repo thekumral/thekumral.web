@@ -7,10 +7,10 @@ using thekumral.Core.Entities;
 
 namespace thekumral.Core.Repositories
 {
-    public interface IPostRepository
+    public interface IPostRepository : IGenericRepository<Post>
     {
-        Task<List<Post>> GetPostsWithCategory(Guid CompanyId);
+        Task<List<Post>> GetPostsByCompanyId(Guid CompanyId);
         List<Post> GetPostsByCategoryId(Guid categoryId);
-        Task<List<Post>> GetPostsByCompanyId(Guid companyId);
+        Task<List<Post>> GetPostsByCategory();
     }
 }

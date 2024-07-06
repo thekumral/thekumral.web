@@ -20,10 +20,13 @@ namespace thekumral.Core.Entities
             CategoryId = categoryId;
             CreatedBy = createdBy;
         }
+
         public string Title { get; set; }
         public string Content { get; set; }
+        public string ShortContent { get; set; }
         public int ViewCount { get; set; } = 0;
-        public Guid? CompanyId { get; set; }
+        public string Url { get; set; }
+        public Guid CompanyId { get; set; }
         public Guid CategoryId { get; set; }
         public Guid UserId { get; set; }
         public Category? Category{ get; set; }

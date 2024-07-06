@@ -40,11 +40,11 @@ namespace thekumral.Service.Validations
                 .Equal(x => x.Password)
                 .WithName("Parola Tekrarı");
 
-            RuleFor(x => x.Role)
-                .IsInEnum()
-                .WithName("Rol")
-                .Must(role => role == RoleType.CompanyAdmin || role == RoleType.CompanyAuthor)
-                .WithMessage("Rol tipi 0 (Companyadmin) veya 1 (Companyauthor) olmalıdır.");
+            //RuleFor(x => x.Role)
+            //    .IsInEnum()
+            //    .WithName("Rol")
+            //    .Must(role => role == RoleType.CompanyAdmin || role == RoleType.CompanyAuthor)
+            //    .WithMessage("Rol tipi 0 (Companyadmin) veya 1 (Companyauthor) olmalıdır.");
 
             RuleFor(x => x.CompanyId).NotNull().NotEmpty().WithName("Sirket Id");
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using thekumral.Core.DTOs;
 using thekumral.Core.DTOs.Users;
 
 namespace thekumral.Core.Services
@@ -12,6 +13,6 @@ namespace thekumral.Core.Services
     {
         Task<IdentityResult> RegisterUser(RegisterDto registerDto);
 
-        Task<LoginResponseDto> Login(LoginDto loginDto);
+        Task<CustomResponseDto<LoginResponseDto>> Login(LoginDto loginDto);
     }
 }

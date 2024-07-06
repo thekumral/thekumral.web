@@ -11,6 +11,8 @@ namespace thekumral.Core.DTOs.Posts
         public string Title { get; set; }
         public string Content { get; set; }
         public Guid CategoryId { get; set; }
+        public string ShortContent { get; set; }
+        public string Url { get; set; }
 
     }
 }

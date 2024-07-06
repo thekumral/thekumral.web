@@ -9,6 +9,7 @@ using thekumral.Core.DTOs;
 using thekumral.Core.Entities;
 using thekumral.Core.Repositories;
 using thekumral.Core.UnitOfWork;
+using thekumral.Core.Services;
 
 namespace thekumral.Service.Services
 {
@@ -34,11 +35,11 @@ namespace thekumral.Service.Services
         /// Kategorilerle birlikte makaleleri getiren işlem.
         /// </summary>
         /// <returns>Makalelerin kategori bilgisiyle özel yanıtı <see cref="List{PostWithCategoryDto}"/> </returns>
-        public async Task<CustomResponseDto<List<PostWithCategoryDto>>> GetPostsWithCategory(Guid CompanyId)
+        public async Task<CustomResponseDto<List<PostDto>>> GetPostsWithCompanyId(Guid CompanyId)
         {
-            var posts = await _postRepository.GetPostsWithCategory(CompanyId);
-            var postsDto = _mapper.Map<List<PostWithCategoryDto>>(posts);
-            return CustomResponseDto<List<PostWithCategoryDto>>.Success(200, postsDto);
+            var posts = await _postRepository.GetPostsByCompanyId(CompanyId);
+            var postsDto = _mapper.Map<List<PostDto>>(posts);
+            return CustomResponseDto<List<PostDto>>.Success(200, postsDto);
         }
 
 
@@ -47,11 +48,11 @@ namespace thekumral.Service.Services
         /// </summary>
         /// <param name="categoryId">Kategori kimliği</param>
         /// <returns>Makalelerin kategori bilgisiyle özel yanıtı <see cref="List{PostWithCategoryDto}"/></returns>
-        public CustomResponseDto<List<PostWithCategoryDto>> GetPostsByCategoryId(Guid categoryId)
+        public CustomResponseDto<List<PostDto>> GetPostsByCategoryId(Guid categoryId)
         {
             var posts = _postRepository.GetPostsByCategoryId(categoryId);
-            var postsDto = _mapper.Map<List<PostWithCategoryDto>>(posts);
-            return CustomResponseDto<List<PostWithCategoryDto>>.Success(200, postsDto);
+            var postsDto = _mapper.Map<List<PostDto>>(posts);
+            return CustomResponseDto<List<PostDto>>.Success(200, postsDto);
         }
 
         /// <summary>
@@ -59,13 +60,18 @@ namespace thekumral.Service.Services
         /// </summary>
         /// <param name="companyId">Şirket kimliği</param>
         /// <returns>Makalelerin şirket bilgisiyle özel yanıtı <see cref="List{PostWithCompanyDto}"/></returns>
-        public async Task<CustomResponseDto<List<PostWithCompanyDto>>> GetPostsByCompanyId(Guid companyId)
+        public async Task<CustomResponseDto<List<PostDto>>> GetPostsByCompanyId(Guid companyId)
         {
             var posts = await _postRepository.GetPostsByCompanyId(companyId);
-            var postsDto = _mapper.Map<List<PostWithCompanyDto>>(posts);
-            return CustomResponseDto<List<PostWithCompanyDto>>.Success(200, postsDto);
+            var postsDto = _mapper.Map<List<PostDto>>(posts);
+            return CustomResponseDto<List<PostDto>>.Success(200, postsDto);
         }
 
-
+        public async Task<CustomResponseDto<PostDto>> GetPostsByCategory()
+        {
+            var posts = await _postRepository.GetPostsByCategory();
+            var postDto = _mapper.Map<PostDto>(posts);
+            return CustomResponseDto<PostDto>.Success(200,postDto);
+        }
     }
 }

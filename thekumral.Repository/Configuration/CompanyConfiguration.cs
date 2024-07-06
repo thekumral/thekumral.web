@@ -26,20 +26,24 @@ namespace thekumral.Repository.Configuration
             builder.HasData(new Company()
             {
                 Id = Guid.Parse("CB94223B-CCB8-4F2F-93D7-0DF96A7F061C"),
-                Name = "ApaDesign",
-                CreatedBy = "Super Admin"
+                Name = "thekumral",
+                CreatedBy = "Super Admin",
+                Description = "Description"
             },
             new Company()
             {
                 Id = Guid.Parse("CB94223B-CCB8-4F2F-93D7-0DF96A7F044C"),
                 Name = "Kumrals",
-                CreatedBy = "Super Admin"
+                CreatedBy = "Super Admin",
+                Description = "Description"
+
             },
             new Company()
             {
                 Id = Guid.Parse("CB94223B-CCB8-4F2F-93D7-0DF96A7F032C"),
                 Name = "CodeLikeARose",
-                CreatedBy = "Super Admin"
+                CreatedBy = "Super Admin",
+                Description = "Description"
             });
         }
 

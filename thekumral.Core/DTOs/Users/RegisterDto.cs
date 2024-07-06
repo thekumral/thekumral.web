@@ -15,6 +15,8 @@ namespace thekumral.Core.DTOs.Users
         public string Email { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
-        public RoleType Role { get; set; }
+        //public Guid RoleId { get; set; }
+
+         public RoleType Role { get; set; }
     }
 }

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\thekumral.Services\thekumral.Service.csproj" />
+  </ItemGroup>
+
 </Project>
