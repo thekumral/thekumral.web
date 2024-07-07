@@ -79,4 +79,3 @@ Başlamak için, projeyi klonlayın ve aşağıdaki adımları izleyin:
 
 Katkılar memnuniyetle karşılanır! Lütfen projeyi fork'layın ve değişikliklerinizle bir pull request oluşturun.
 
-## Lisans
