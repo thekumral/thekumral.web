@@ -1,6 +1,5 @@
-# thekumral Projesi
-
-thekumral projesine hoş geldiniz! Bu proje, web ve kontrol paneli işlevsellikleri için sağlam bir mimari sağlamak üzere tasarlanmış çok katmanlı bir uygulamadır. Aşağıda her katman ve kullanılan teknolojiler hakkında genel bir bilgi bulacaksınız.
+# thekumral.web
+Bu proje, web ve kontrol paneli işlevsellikleri için sağlam bir mimari sağlamak üzere tasarlanmış çok katmanlı bir uygulamadır. Aşağıda her katman ve kullanılan teknolojiler hakkında genel bir bilgi bulacaksınız.
 
 ## Katmanlar
 
