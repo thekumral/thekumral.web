@@ -58,8 +58,8 @@ namespace thekumral.Api.Controllers
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var confirmationLink = new StringBuilder($"https://localhost:7205/api/account/confirmEmail?token={UrlEncoder.Default.Encode(token)}&userId={user.Id}");
 
-            var emailSubject = "Selamlarr Sevgilime";
-            var emailBody = $"Merhabalar Efenim, <br> Bu mail cms projemizden gönderilmiştir. Seni çok sevdiğimi belirtir ve bilgilerini sana gönderirimm.<br><br>First Name: {user.FirstName},<br><br> LastName : {user.LastName} <br><br> Email : {user.Email} <br><br> Password : {registerDTO.Password}<br> <br> Bu arada Şirketinin Adını çekemiyorum burdan ama Guid'si de bu {user.CompanyId} Denemedir bu <br><br>Please confirm your email address by clicking the link below:<br><br><a href='{confirmationLink}'>Confirm Email</a> BYY    ";
+            var emailSubject = "Email Confirmation";
+            var emailBody = $"Hello , {user.FirstName},<br><br> LastName : {user.LastName} <br><br> Email : {user.Email} <br><br> Password : {registerDTO.Password}<br> <br> Please confirm your email address by clicking the link below:<br><br><a href='{confirmationLink}'>Confirm Email</a> BYY    ";
 
 
 

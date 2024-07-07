@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Web", "thekumral.web\thekumral.Web.csproj", "{4D550D71-B2CF-4841-8315-87D36A69C91A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Api", "thekumral.Api\thekumral.Api.csproj", "{AE4F3D5E-31E6-4AF6-9039-34DB4C2BAA1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Core", "thekumral.Core\thekumral.Core.csproj", "{7B2070E2-EE91-4827-8F4B-8C55347F1841}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Service", "thekumral.Services\thekumral.Service.csproj", "{57FD57EA-4C2F-497A-B29F-6DBB674BF861}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Repository", "thekumral.Repository\thekumral.Repository.csproj", "{94E31B70-F174-42B3-B3A1-B310A39D29BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "thekumral.Caching", "thekumral.cache\thekumral.Caching.csproj", "{98AD01D4-DEE0-4497-83A6-2F7A3C7291D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thekumral.Web.Dashboard", "thekumral.Web.Dashboard\thekumral.Web.Dashboard.csproj", "{0C7C501D-1D4D-4D6E-BB20-5A7B665CB7F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D550D71-B2CF-4841-8315-87D36A69C91A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D550D71-B2CF-4841-8315-87D36A69C91A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D550D71-B2CF-4841-8315-87D36A69C91A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D550D71-B2CF-4841-8315-87D36A69C91A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE4F3D5E-31E6-4AF6-9039-34DB4C2BAA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE4F3D5E-31E6-4AF6-9039-34DB4C2BAA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE4F3D5E-31E6-4AF6-9039-34DB4C2BAA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE4F3D5E-31E6-4AF6-9039-34DB4C2BAA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2070E2-EE91-4827-8F4B-8C55347F1841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2070E2-EE91-4827-8F4B-8C55347F1841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2070E2-EE91-4827-8F4B-8C55347F1841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2070E2-EE91-4827-8F4B-8C55347F1841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57FD57EA-4C2F-497A-B29F-6DBB674BF861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57FD57EA-4C2F-497A-B29F-6DBB674BF861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57FD57EA-4C2F-497A-B29F-6DBB674BF861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57FD57EA-4C2F-497A-B29F-6DBB674BF861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E31B70-F174-42B3-B3A1-B310A39D29BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E31B70-F174-42B3-B3A1-B310A39D29BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E31B70-F174-42B3-B3A1-B310A39D29BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E31B70-F174-42B3-B3A1-B310A39D29BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98AD01D4-DEE0-4497-83A6-2F7A3C7291D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98AD01D4-DEE0-4497-83A6-2F7A3C7291D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98AD01D4-DEE0-4497-83A6-2F7A3C7291D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98AD01D4-DEE0-4497-83A6-2F7A3C7291D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C7C501D-1D4D-4D6E-BB20-5A7B665CB7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C7C501D-1D4D-4D6E-BB20-5A7B665CB7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C7C501D-1D4D-4D6E-BB20-5A7B665CB7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C7C501D-1D4D-4D6E-BB20-5A7B665CB7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05433815-CDE9-4464-A80F-99D2871826CE}
+	EndGlobalSection
+EndGlobal
